@@ -1,0 +1,49 @@
+import React from 'react';
+import { Button } from './Button';
+
+export default {
+  title: 'Atoms/Button',
+  component: Button,
+  argTypes: {
+    label: { control: 'text' },
+    variant: {
+      control: 'select',
+      options: [
+        'primary',
+        'secondary',
+        'tertiary',
+        'misc',
+        'warning',
+        'error',
+        'success',
+        'menu',
+        'image',
+      ],
+    },
+  },
+};
+
+const Template = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: 'primary',
+  label: 'Button',
+};
+
+// export const Secondary = Template.bind({});
+// Secondary.args = {
+//   label: 'Button',
+// };
+
+// export const Large = Template.bind({});
+// Large.args = {
+//   size: 'large',
+//   label: 'Button',
+// };
+
+// export const Small = Template.bind({});
+// Small.args = {
+//   size: 'small',
+//   label: 'Button',
+// };

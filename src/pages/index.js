@@ -1,4 +1,5 @@
 import * as React from "react"
+import tw, { styled } from "twin.macro"
 
 // styles
 const pageStyles = {
@@ -78,6 +79,14 @@ const badgeStyle = {
   lineHeight: 1,
 }
 
+// const Button = styled.button`
+//   ${tw`bg-blue-500 hover:bg-blue-800 text-white p-2 rounded`}
+// `
+// or use the shorthand version
+const StyledButton = tw.button`
+  bg-blue-500 hover:bg-blue-800 text-white p-2 rounded
+`
+
 // data
 const links = [
   {
@@ -129,6 +138,13 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
+
+      <div>
+        <h1>Hi people</h1>
+        <StyledButton>Activate</StyledButton>
+      </div>
+
+
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations
